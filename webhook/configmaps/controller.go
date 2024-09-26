@@ -61,8 +61,9 @@ func NewAdmissionController(
 		key:  key,
 		path: path,
 
-		constructors: make(map[string]reflect.Value),
-		secretName:   options.SecretName,
+		constructors:              make(map[string]reflect.Value),
+		secretName:                options.SecretName,
+		disableNamespaceOwnership: options.DisableNamespaceOwnership,
 
 		client:       client,
 		vwhlister:    vwhInformer.Lister(),
